@@ -57,9 +57,9 @@ public class BigFuckingEditor {
                 {
                     for(int z = 0 ; z <px_size ; z++)
                     {
-
-                            img.setRGB(y+x, i+z, p);
-
+                        if(y + x<img.getWidth() && i + z<img.getHeight()) {
+                            img.setRGB(y + x, i + z, p);
+                        }
 
                     }
                 }

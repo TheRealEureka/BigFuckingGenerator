@@ -12,7 +12,7 @@ public class Example
     public static void main(String[] args)
     {
         for(int i = 0 ; i < 5 ; i++) {
-            int pixel_size = 100;
+            int pixel_size = 9;
             // Image file dimensions
             int width = 500, height = 500;
 
