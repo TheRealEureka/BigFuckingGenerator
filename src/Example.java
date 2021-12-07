@@ -11,15 +11,14 @@ public class Example
 {
     public static void main(String[] args)
     {
-        for(int i = 0 ; i < 10 ; i++) {
-            int pixel_size = 5;
+        for(int i = 0 ; i < 5 ; i++) {
+            int pixel_size = 100;
             // Image file dimensions
             int width = 500, height = 500;
 
             //Filter parameters
-            Color color = new Color((int)(Math.random()*(256)), (int)(Math.random()*(256)), (int)(Math.random()*(256)), 100+(int)(Math.random()*(156)));
-
-
+            Color color = new Color((int)(Math.random()*(256)), (int)(Math.random()*(256)), (int)(Math.random()*(256)), 100+(int)(Math.random()*(81)));
+        System.out.println(i+" : "+color.getAlpha());
             // Create buffered image object
             BufferedImage filter = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
             BufferedImage img = BigFuckingEditor.generateImage(pixel_size, width, height);
@@ -37,7 +36,7 @@ public class Example
 
             // write image
             try {
-                File f = new File("generated/init"+i+".png");
+                File f = new File("generated/Examples/["+pixel_size+","+color.getRed()+","+color.getGreen()+","+color.getBlue()+","+color.getAlpha()+"].png");
                 ImageIO.write(img, "png", f);
 
             } catch (IOException e) {
