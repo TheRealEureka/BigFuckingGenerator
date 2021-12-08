@@ -18,7 +18,7 @@ public class Example
 
             //Filter parameters
             Color color = new Color((int)(Math.random()*(256)), (int)(Math.random()*(256)), (int)(Math.random()*(256)), 100+(int)(Math.random()*(81)));
-        System.out.println(i+" : "+color.getAlpha());
+        //System.out.println(i+" : "+color.getAlpha());
             // Create buffered image object
             BufferedImage filter = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
             BufferedImage img = BigFuckingEditor.generateImage(pixel_size, width, height);
@@ -33,10 +33,11 @@ public class Example
 
             // BigFuckingEditor.textOver(img, "BFG Project", 125, 250, 50, Color.BLACK);
 
+            BigFuckingEditor.blurImage(img);
 
             // write image
             try {
-                File f = new File("generated/Examples/["+pixel_size+","+color.getRed()+","+color.getGreen()+","+color.getBlue()+","+color.getAlpha()+"].png");
+                File f = new File("generated/Examples/RandomGenerator/["+pixel_size+","+color.getRed()+","+color.getGreen()+","+color.getBlue()+","+color.getAlpha()+"].png");
                 ImageIO.write(img, "png", f);
 
             } catch (IOException e) {
