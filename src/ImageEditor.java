@@ -4,7 +4,7 @@ import java.awt.image.BufferedImageOp;
 import java.awt.image.ConvolveOp;
 import java.awt.image.Kernel;
 
-public class BigFuckingEditor {
+public class ImageEditor {
 
     //Paint an image over another
     public static void paintOver(BufferedImage back, BufferedImage top, int decalx, int decaly) {
