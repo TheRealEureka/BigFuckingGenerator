@@ -1,4 +1,4 @@
-# BigFuckingGenerator
+# ImageGenerator
 - Generates a random image 
 - Add text
 - Paint over  
